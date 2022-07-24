@@ -5,6 +5,7 @@ const description = document.querySelectorAll('.description')
 // seleciona todos os links internos da página
 const linksInternos = document.querySelectorAll('a[href^="#"]');
 // estabelece o primeiro elemento de animais-descricao como ativo
+//description.forEach(item => item.classList.remove('ativo'))
 description[0].classList.add('ativo');
 
 // função que exibe/deixa de exibir a descrição de um animal conforme a imagem clicada
