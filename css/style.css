@@ -6,6 +6,9 @@ img {
   display: block;
   max-width: 100%;
 }
+a {
+  color: #222;
+}
 ul {
   list-style: none;
 }
@@ -15,6 +18,9 @@ body {
   -webkit-font-smoothing: antialiased;
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+.texto-maior {
+  font-size: 150%;
 }
 .display-none {
   display: none;
