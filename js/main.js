@@ -5,7 +5,6 @@ const description = document.querySelectorAll('.description')
 // seleciona todos os links internos da página
 const linksInternos = document.querySelectorAll('a[href^="#"]');
 // estabelece o primeiro elemento de animais-descricao como ativo
-//description.forEach(item => item.classList.remove('ativo'))
 description[0].classList.add('ativo');
 
 // função que exibe/deixa de exibir a descrição de um animal conforme a imagem clicada
@@ -17,16 +16,16 @@ imagens.forEach((img, index) => {
 });
 
 // função que atribui/deixa de atribuir determinada classe para um elemento (neste caso os links internos)
-// function handleLink(e) {
-//   e.preventDefault();
-//   linksInternos.forEach(link => {
-//     link.classList.remove('ativo');
-//   })
-//   e.currentTarget.classList.add('ativo');
-// }
-// linksInternos.forEach(link => {
-//   link.addEventListener('click', handleLink)
-// });
+function handleLink(e) {
+  e.preventDefault();
+  linksInternos.forEach(link => {
+    link.classList.remove('ativo');
+  })
+  e.currentTarget.classList.add('ativo');
+}
+linksInternos.forEach(link => {
+  link.addEventListener('click', handleLink)
+});
 
 // função para atribuir/remover determinada classe da tag HTML ao pressionar determinada tecla
 window.addEventListener('keydown', (e) => {
