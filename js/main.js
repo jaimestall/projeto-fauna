@@ -56,20 +56,18 @@ function animacaoScroll() {
   const sections = document.querySelectorAll('.scroll');
   const windowCorte = window.innerHeight * 0.85
   window.addEventListener('scroll', chamaSection)
-  if (sections.length) {
-    function chamaSection() {
-      sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const isSectionVisible = (sectionTop - windowCorte) < 0;
-        if (isSectionVisible) {
-          section.classList.add('ativo');
-        } else {
-          section.classList.remove('ativo');
-        }
-      })
-    }
-    chamaSection();
+  function chamaSection() {
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const isSectionVisible = (sectionTop - windowCorte) < 0;
+      if (isSectionVisible) {
+        section.classList.add('ativo');
+      } else {
+        section.classList.remove('ativo');
+      }
+    })
   }
+  chamaSection();
 }
 animacaoScroll();
 
