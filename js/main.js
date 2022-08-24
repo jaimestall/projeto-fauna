@@ -77,3 +77,6 @@ window.addEventListener('keydown', (e) => {
     document.documentElement.classList.toggle('texto-maior')
   }
 });
+
+import initModal from './modules/modal.js';
+initModal();
